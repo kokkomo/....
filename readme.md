@@ -20,13 +20,12 @@ The OKO Blockchain Project aims to seamlessly integrate AI and blockchain techno
 
 ## Contributions
 
-We welcome contributions! Please see our [contribution guide](LINK_TO_CONTRIBUTION_GUIDE).
+email okoraclecorp@gmail.com
 
 ## License
 
-This project is licensed under the [MIT License](LINK_TO_LICENSE).
+SERVICE IMPLIES CONSENT
 
 ## Contact
 
-For more information or queries, please contact [YOUR EMAIL or TEAM EMAIL].
-
+okoraclecorp@gmail.com
