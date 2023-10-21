@@ -7,7 +7,9 @@ submit_data(NodeId, DataPackage) when is_binary(DataPackage) ->
     case validate_data(DataPackage) of
         true ->
             % Data is valid, add to blockchain
-            NewBlock = oko_block:add_block(DataPackage), % This function needs to be adjusted based on your blockchain implementation
+            % For simplicity, assuming a function get_current_chain/0 fetches the current state of the blockchain
+            CurrentChain = get_current_chain(),
+            NewBlock = oko_block:add_block(CurrentChain, DataPackage),
             {success, NewBlock};
         false ->
             % Data is not valid
@@ -17,3 +19,7 @@ submit_data(NodeId, DataPackage) when is_binary(DataPackage) ->
 validate_data(DataPackage) ->
     % Simple validation for MVP: Check if data starts with "VALID"
     "VALID" == binary:part(DataPackage, {0, 5}).
+
+% For the purpose of this demonstration, I'm assuming a dummy blockchain state
+get_current_chain() ->
+    [oko_block:create_genesis_block()].
